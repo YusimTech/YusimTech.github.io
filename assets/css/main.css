@@ -3510,3 +3510,51 @@ input, select, textarea {
 			}
 
 	}
+
+/* --- YUSIM TECH CUSTOM DYNAMIC ATOM --- */
+
+/* 1. The Container */
+.icon-lab {
+  width: 100px;  /* Adjust size as needed */
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 2. Positioning the centers */
+.orbit-1, .orbit-2, .orbit-3, .icon-lab circle {
+  transform-origin: 50px 50px; /* Precise center of your 100x100 viewBox */
+}
+
+/* 3. Orbit Speeds */
+.orbit-1 { animation: rotate-atom 8s linear infinite; }
+.orbit-2 { animation: rotate-atom-reverse 5s linear infinite; }
+.orbit-3 { animation: rotate-atom 3s linear infinite; }
+
+/* 4. The Nucleus Pulse */
+.icon-lab circle {
+  animation: pulse-core 2s ease-in-out infinite;
+}
+
+/* 5. Keyframes */
+@keyframes rotate-atom {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-atom-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulse-core {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.6; 
+  }
+  50% { 
+    transform: scale(1.3); 
+    opacity: 1;
+    fill: #00d4ff; /* Giving the pulse a high-tech glow color */
+  }
+}
