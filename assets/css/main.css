@@ -3542,6 +3542,7 @@ input, select, textarea {
   filter: drop-shadow(0 0 3px currentColor);
 }
 .e-blue { color: #00d4ff; }
+.e-gold { color: #ffcc00; }
 
 /* 5. Cleaned Keyframes (No Duplicates) */
 @keyframes rotate-atom {
