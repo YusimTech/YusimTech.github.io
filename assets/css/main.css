@@ -3527,8 +3527,8 @@ input, select, textarea {
 }
 
 /* 3. Orbit Speeds */
-.orbit-1 { animation: rotate-atom 8s linear infinite; }
-.orbit-2 { animation: rotate-atom-reverse 5s linear infinite; }
+.orbit-1 { animation: rotate-atom 3s linear infinite; }
+.orbit-2 { animation: rotate-atom-reverse 3s linear infinite; }
 .orbit-3 { animation: rotate-atom 3s linear infinite; }
 
 /* 4. The Nucleus Pulse */
