@@ -3527,9 +3527,9 @@ input, select, textarea {
 }
 
 /* 3. Orbit Speeds */
-.orbit-1 { animation: rotate-atom 8s linear infinite; }
-.orbit-2 { animation: rotate-atom-reverse 8s linear infinite; }
-.orbit-3 { animation: rotate-atom 8s linear infinite; }
+.orbit-1 { animation: rotate-atom 30s linear infinite; }
+.orbit-2 { animation: rotate-atom-reverse 25s linear infinite; }
+.orbit-3 { animation: rotate-atom 20s linear infinite; }
 
 /* 4. The Nucleus Pulse */
 .icon-lab circle {
@@ -3542,6 +3542,29 @@ input, select, textarea {
   to { transform: rotate(360deg); }
 }
 
+/* 6.THE GLOWING ELECTRONS */
+.electron {
+  filter: drop-shadow(0 0 3px currentColor);
+}
+
+.e-blue { color: #00d4ff; } /* High-tech Cyan */
+.e-gold { color: #ffcc00; } /* Precision Gold */
+
+/* Keyframe for the electron movement */
+@keyframes electron-glide {
+  0% { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+
+@keyframes rotate-atom {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-atom-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
 @keyframes rotate-atom-reverse {
   from { transform: rotate(360deg); }
   to { transform: rotate(0deg); }
