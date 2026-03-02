@@ -3513,58 +3513,43 @@ input, select, textarea {
 
 /* --- YUSIM TECH CUSTOM DYNAMIC ATOM --- */
 
-/* 1. The Container */
+/* 1. The Container & Core Settings */
 .icon-lab {
-  width: 100px;  /* Adjust size as needed */
+  width: 100px;
   height: 100px;
   display: inline-block;
   vertical-align: middle;
+  overflow: visible; /* Prevents the glow/pulse from being clipped */
 }
 
-/* 2. Positioning the centers */
+/* 2. Unified Center Point */
 .orbit-1, .orbit-2, .orbit-3, .icon-lab circle {
-  transform-origin: 50px 50px; /* Precise center of your 100x100 viewBox */
+  transform-origin: 50px 50px;
 }
 
-/* 3. Orbit Speeds */
+/* 3. Orbit & Electron Animations */
+/* I've kept your "Calm" speeds (20s-30s) to prevent dizziness */
 .orbit-1 { animation: rotate-atom 30s linear infinite; }
 .orbit-2 { animation: rotate-atom-reverse 25s linear infinite; }
 .orbit-3 { animation: rotate-atom 20s linear infinite; }
 
-/* 4. The Nucleus Pulse */
 .icon-lab circle {
   animation: pulse-core 2s ease-in-out infinite;
 }
 
-/* 5. Keyframes */
-@keyframes rotate-atom {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* 6.THE GLOWING ELECTRONS */
+/* 4. Electron Styling & Glow */
 .electron {
   filter: drop-shadow(0 0 3px currentColor);
 }
+.e-blue { color: #00d4ff; }
+.e-gold { color: #ffcc00; }
 
-.e-blue { color: #00d4ff; } /* High-tech Cyan */
-.e-gold { color: #ffcc00; } /* Precision Gold */
-
-/* Keyframe for the electron movement */
-@keyframes electron-glide {
-  0% { offset-distance: 0%; }
-  100% { offset-distance: 100%; }
-}
-
+/* 5. Cleaned Keyframes (No Duplicates) */
 @keyframes rotate-atom {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-@keyframes rotate-atom-reverse {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
-}
 @keyframes rotate-atom-reverse {
   from { transform: rotate(360deg); }
   to { transform: rotate(0deg); }
@@ -3578,6 +3563,7 @@ input, select, textarea {
   50% { 
     transform: scale(1.3); 
     opacity: 1;
-    fill: #00d4ff; /* Giving the pulse a high-tech glow color */
+    fill: #00d4ff; 
   }
 }
+
