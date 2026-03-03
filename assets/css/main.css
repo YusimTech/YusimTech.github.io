@@ -3515,8 +3515,8 @@ input, select, textarea {
 
 /* 1. The Container & Core Settings */
 .icon-lab {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   vertical-align: middle;
   overflow: visible; /* Prevents the glow/pulse from being clipped */
