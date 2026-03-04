@@ -3568,3 +3568,49 @@ input, select, textarea {
     filter: drop-shadow(0 0 8px #ffcc00); /* Core Glow */
   }
 }
+
+Gemini said
+Since I can't see your screen directly, I’ve put together a visual representation of how the "High-Energy Engineering" header will look with the massive bold text, the gold pulsing core, and the blue electrons.
+
+Imagine this centered at the top of your site:
+
+The Visual Layout
+The Typography: By using font-weight: 900 and 4.5rem, the "YUSIM TECH" title becomes the dominant anchor of the page. It feels heavy, stable, and established.
+
+The Contrast: The Gold core acts as a "Power Source" (the heart of the company), while the Blue electrons represent "Innovation and Data" moving around it.
+
+The Space: Because we integrated the SVG into the Photon span class, it sits perfectly above the text without causing that "shrinking" glitch.
+
+The Final "Master Code" for this look
+To get exactly what is shown in the description above, ensure your main.css has this specific combination:
+
+/* --- THE YUSIM HEADER --- */
+
+#headerYus h1 {
+    font-size: 5rem;              /* Massive Size */
+    font-weight: 900;             /* Maximum Boldness */
+    color: #ffffff;               /* Clean White */
+    text-transform: uppercase;    /* Industrial Feel */
+    letter-spacing: -3px;         /* Tight, Modern Kerning */
+    line-height: 0.9;             /* Stacked look */
+    margin: 1rem 0;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Adds depth */
+}
+
+/* The Glow Effect on the Atom */
+.icon-lab {
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.4));
+    margin-bottom: 2rem;
+}
+
+/* Mobile Responsiveness (Prevents the 'Tiny Text' glitch) */
+@media screen and (max-width: 736px) {
+    #headerYus h1 {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+    .icon-lab {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
